@@ -45,7 +45,8 @@ h1 {
    * 2. Show the overflow in Edge and IE.
    */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -189,9 +190,9 @@ select {
    * Correct the inability to style clickable types in iOS and Safari.
    */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -199,9 +200,9 @@ button,
    * Remove the inner border and padding in Firefox.
    */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -210,9 +211,9 @@ button::-moz-focus-inner,
    * Restore the focus styles unset by the previous rule.
    */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -230,7 +231,8 @@ fieldset {
    *    `fieldset` elements in all browsers.
    */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -262,9 +264,10 @@ textarea {
    * 1. Add the correct box sizing in IE 10.
    * 2. Remove the padding in IE 10.
    */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box;
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -273,8 +276,8 @@ textarea {
 /**
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -282,7 +285,7 @@ textarea {
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -292,7 +295,7 @@ textarea {
 /**
    * Remove the inner padding in Chrome and Safari on macOS.
    */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -341,5 +344,225 @@ template {
 
 body {
   background-color: #ecf0f1;
-  font-family: "Roboto", "sans-serif";
-}/*# sourceMappingURL=main.css.map */
+  font-family: 'Roboto', 'sans-serif';
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  text-align: center;
+}
+
+#loginForm {
+  background-color: #487eb0;
+  color: #f5f6fa;
+}
+
+#loginForm h1 {
+  text-align: center;
+}
+
+#loginForm .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+#loginForm .inputs input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #00000022;
+  padding: 0.75rem 1rem;
+}
+
+#loginForm .inputs input:last-of-type {
+  border: none;
+}
+
+#loginForm .login {
+  color: currentColor;
+  background-color: #353b48;
+  border: none;
+  width: 100%;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+#loginForm .login:hover, #loginForm .login:focus-within {
+  background-color: #2f3640;
+}
+
+#loginForm .form-error {
+  color: #2d3436;
+  text-align: center;
+  margin: 0;
+  display: none;
+  visibility: hidden;
+}
+
+#signUpForm {
+  background-color: #f5f6fa;
+  color: #2d3436;
+}
+
+#signUpForm h1 {
+  text-align: center;
+}
+
+#signUpForm .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid #00000022;
+}
+
+#signUpForm .inputs input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #00000022;
+  padding: 0.75rem 1rem;
+}
+
+#signUpForm .inputs input:last-of-type {
+  border: none;
+}
+
+#signUpForm .signIn {
+  color: #f5f6fa;
+  background-color: #487eb0;
+  border: none;
+  width: 100%;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+#signUpForm .signIn:hover, #signUpForm .signIn:focus-within {
+  background-color: #3a6996;
+}
+
+#signUpForm .form-error {
+  color: #2d3436;
+  text-align: center;
+  margin: 0;
+  display: none;
+  visibility: hidden;
+}
+
+#loginForm,
+#signUpForm {
+  width: clamp(30vw, 25rem, 90vw);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  padding: 5rem 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 1rem;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+#loginForm .loginOption,
+#signUpForm .loginOption {
+  background-color: transparent;
+  color: currentColor;
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+#loginForm .loginOption:hover, #loginForm .loginOption.focus-within,
+#signUpForm .loginOption:hover,
+#signUpForm .loginOption.focus-within {
+  text-decoration: underline;
+}
+
+#loginForm .loginOption a,
+#signUpForm .loginOption a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+#loginForm .loginOption a:active,
+#signUpForm .loginOption a:active {
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #487eb0;
+  color: #f5f6fa;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+nav ul li a {
+  color: currentColor;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem 2rem;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=main.css.map */
